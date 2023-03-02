@@ -37,8 +37,6 @@ class WordPairListViewModel extends GetxController {
     }
   }
 
-
-
   void removeFromFavouriteList(FavouriteWordPairsModel favouriteWordPairsModel) {
     favouriteList.removeWhere((element) => element.pairsWords == favouriteWordPairsModel.pairsWords);
     for (var element in wordsPairsList) {
