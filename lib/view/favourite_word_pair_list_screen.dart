@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:word_pair_generators/view_model/wordpairslist_view_model.dart';
-
-import '../utills/app_bar_widgets.dart';
 import '../utills/colors.dart';
+import '../utills/widgets.dart';
 
 class FavouriteWordParsListScreen extends StatelessWidget {
   var wordPairsListVM = Get.find<WordPairListViewModel>();

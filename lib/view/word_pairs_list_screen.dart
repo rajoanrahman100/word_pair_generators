@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:word_pair_generators/model/favourite_word_pair_list_model.dart';
-import 'package:word_pair_generators/utills/app_bar_widgets.dart';
 import 'package:word_pair_generators/utills/colors.dart';
+import 'package:word_pair_generators/utills/widgets.dart';
 import 'package:word_pair_generators/view/favourite_word_pair_list_screen.dart';
 import 'package:word_pair_generators/view_model/wordpairslist_view_model.dart';
 

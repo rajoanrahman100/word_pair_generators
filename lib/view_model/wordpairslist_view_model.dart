@@ -1,6 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:word_pair_generators/model/favourite_word_pair_list_model.dart';
 import 'package:word_pair_generators/model/word_pair_list_model.dart';
+import 'package:word_pair_generators/utills/colors.dart';
+
+import '../utills/widgets.dart';
 
 class WordPairListViewModel extends GetxController {
   RxList<FavouriteWordPairsModel> favouriteList = <FavouriteWordPairsModel>[].obs;
@@ -28,10 +33,15 @@ class WordPairListViewModel extends GetxController {
           isFavourite: wordPairsModel.isFavourite!,
         )
       ]);
+
+      showToast("Added to favorites");
+
     } else {
       favouriteList.removeWhere((element) => element.pairsWords == wordPairsModel.pairsWords!);
     }
   }
+
+
 
   void removeFromFavouriteList(FavouriteWordPairsModel favouriteWordPairsModel) {
     favouriteList.removeWhere((element) => element.pairsWords == favouriteWordPairsModel.pairsWords);
@@ -40,5 +50,6 @@ class WordPairListViewModel extends GetxController {
         element.isFavourite!.value = false;
       }
     }
+    showToast("Remove from favorites");
   }
 }
